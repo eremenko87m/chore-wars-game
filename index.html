@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0877dc" />
+  <title>Chore Wars — Summer House Mission</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-stage" id="gameStage" aria-label="Chore Wars online lesson game">
+      <img id="sceneImage" class="scene-image" src="assets/title.png" alt="Chore Wars lesson scene" />
+      <div id="sceneHotspots" class="hotspot-layer" aria-live="polite"></div>
+
+      <header class="hud" id="hud" hidden>
+        <div class="hud-progress">
+          <span class="hud-kicker">A1+ • GRADE 4</span>
+          <div class="progress-track" aria-label="Mission progress"><div id="progressFill" class="progress-fill"></div></div>
+          <span id="progressText" class="progress-text">0 / 7</span>
+        </div>
+        <div id="scoreboard" class="scoreboard" aria-label="Player scores"></div>
+      </header>
+
+      <div class="top-actions">
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="Toggle sound" title="Sound">SOUND ON</button>
+        <button id="fullscreenBtn" class="icon-btn" type="button" aria-label="Fullscreen" title="Fullscreen">FULLSCREEN</button>
+      </div>
+
+      <section id="setupPanel" class="setup-panel glass-panel">
+        <div class="setup-title">4-PLAYER CLASS MODE</div>
+        <p>Type student names or keep the defaults.</p>
+        <div class="player-inputs">
+          <label>Player 1<input id="p1" value="Player 1" maxlength="14" /></label>
+          <label>Player 2<input id="p2" value="Player 2" maxlength="14" /></label>
+          <label>Player 3<input id="p3" value="Player 3" maxlength="14" /></label>
+          <label>Player 4<input id="p4" value="Player 4" maxlength="14" /></label>
+        </div>
+        <button id="startBtn" class="primary-btn huge-btn" type="button">START MISSION</button>
+      </section>
+
+      <section id="actionTray" class="action-tray glass-panel" hidden aria-live="polite"></section>
+      <section id="modal" class="modal" hidden aria-live="assertive"></section>
+
+      <nav class="bottom-nav" id="bottomNav" hidden aria-label="Game navigation">
+        <button id="prevBtn" class="nav-btn" type="button">BACK</button>
+        <button id="activePlayerBtn" class="turn-btn" type="button" title="Change active player">TURN: PLAYER 1</button>
+        <button id="nextBtn" class="nav-btn primary" type="button">NEXT MISSION</button>
+      </nav>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
